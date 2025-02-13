@@ -1,0 +1,222 @@
+.main .main-text{
+    align-items: center;
+    text-align: center;
+}
+.main .main-form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    outline: transparent;
+   
+    margin:30px 50px;
+    padding: 30px 50px;
+}
+.main .main-form input{
+    border: 1px solid #ededed;
+    color: #696969;
+    font-family: Avenir Next, sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    background: #fff;
+    margin: 6px 12px;
+    padding: 28px 17px;
+    height: 40px;
+    outline: none;
+    border-radius: 0;
+    width: 500px;
+    
+}
+.main .main-form .email{
+   display: block;
+}
+.main .main-form button{
+    width: 13%;
+    height: 50px;
+    border: 2px #000  solid;
+    margin: 20px 0;
+}
+.main .main-form button a{
+    color: #fff;
+}
+    .main .main-form button:hover{
+        background: #000;
+        color: #fff;
+        box-shadow:2px 2px 2px  yellow ;
+}
+.sign-in,.acount{
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.sign-in h2, p{
+padding: 20px 10px;
+}
+.sign-in .acount input{
+ margin: 20px 100px;
+    padding: 28px 0;
+    height: 40px;
+    width: 500px;
+}
+.acount .email{
+    border: 1px solid #ededed;
+    color: #696969;
+    font-family: Avenir Next, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    background: #fff;
+    margin: 0;
+    padding: 20px 17px;
+    height: 40px;
+    outline: none;
+    border-radius: 0;
+    display: block;
+    padding-left: 150px;
+}
+
+.acount button{
+    height: 50px;
+    width: 50%;
+    background-color: black;
+    color: #fff;
+   padding: 10px 0;
+   border:1px #000 solid;
+   margin-right: 250px;
+
+}
+.acount  .forget-password a{
+    color: rgb(0, 0, 0,1);
+    font-size: smaller;
+    margin-left: 150px;
+  
+}
+.acount  .forget-password a:hover{
+    color: #696969;
+}
+.sign-in button{
+    height: 50px;
+    width: 20%;
+    background-color: black;
+    color: #fff;
+   padding: 10px 0;
+   border:1px #000 solid;
+
+}
+.sign-in button a{
+    color:#fff;
+
+}
+.sign-in button a:hover{
+    color: rgb(194, 145, 23);
+}
+.sign-in button:hover{
+background: rgb(231, 231, 97);
+color: rgb(194, 145, 23);
+border:1px yellow solid;
+}
+.acount button:hover{
+    background: rgb(231, 231, 97);
+    color: rgb(194, 145, 23);
+    border:1px yellow solid;
+}
+.pro{
+    margin: 100px 20px;
+    padding-top: 200px;
+}
+/* creat-account */
+h2{
+    font-family:mora;
+    font-weight: 700;
+}
+.btn{
+    background-color: black;
+    color: #fff;
+    width: 25%;
+    border-radius: 0;
+}
+.btn:hover{
+    background-color: yellow;
+    color: orangered;
+}
+.main .account-text{
+    align-items: center;
+    text-align: center;
+}
+.main .account-form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    outline: transparent;
+   text-align: start;
+    margin:30px 50px;
+    padding: 30px 50px;
+}
+.main .account-form input{
+    border: 1px solid #ededed;
+    color: #696969;
+    font-family: Moro, sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    background: #fff;
+    margin: 0;
+    padding: 30px 50px;
+    height: 40px;
+    outline: none;
+    border-radius: 0;
+    margin: 10px;
+    
+}
+.main .account-form .email{
+   display: block;
+}
+.map-section__background-wrapper{
+    position: relative;
+}
+.map-section__background-wrapper .text{
+ 
+    background-color: #fff;
+    padding: 30px 50px;
+    text-align: center;
+   
+}
+
+.map-section__background-wrapper .text button{
+    border: yellow 1px solid;
+    background-color: rgb(230, 230, 85);
+    color:rgb(227, 131, 97);
+    padding: 10px 30px ;
+}
+.map-section__background-wrapper .text button:hover{
+border: #000 2px solid;
+background-color: #fff;
+color: #000;
+}
+/* colliction */
+.colliction {
+ margin: 100px;
+}
+.colliction .card2{
+    position: relative;
+flex-basis: 100px;
+margin: auto;
+object-fit: cover; 
+box-sizing: border-box;
+gap: 5px;
+width: 33.33333%;
+
+}
+
+.colliction .card2 .cord-body h5{
+ text-align: center;
+ margin-bottom: 150px;
+
+}
+.colliction .card2 .img .overlay{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+}

@@ -1,0 +1,97 @@
+bottom {
+    padding: 100px;
+    font-family: Avenir-next;
+    font-size: large;
+    font-weight: 100;
+
+}
+.bottom .text{
+    font-weight:lighter;
+font-size: small;
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.5);
+}
+.bottom .text .bottom-social{
+    gap: 20px;
+    font-weight:lighter;
+    font-size: small;
+    color: rgba(0, 0, 0, 0.5);
+}
+.bottom .bottom-social a{
+    color:rgba(0, 0, 0, 0.5) ;
+}
+.bottom .bottom-social a:hover{
+    color: rgb(194, 145, 23);
+
+}
+.bottom .row .links form li  {
+    list-style-type: none;
+    font-weight: 50;
+    font-size: small;
+    padding: 3px 0;
+   
+    
+}
+.bottom .row .links form li a{
+    color: rgba(0, 0, 0, 0.5);
+}
+.bottom .row p{
+    color: rgba(0, 0, 0, 0.5);
+}
+.bottom .row .links form li a:hover{
+    list-style-type: none;
+    color: rgb(194, 145, 23);
+}
+.btne
+{
+   
+    width: 100%;
+}
+.btne input{
+    outline: none;
+    width: 70%;
+}
+.btne button {
+    background-color: black;
+    color: #fff;
+    width: 25%;
+    flex-wrap: nowrap;
+
+}
+@media  (max-width:767px) {
+    .btne button{
+        width: 50%;
+        flex-wrap: nowrap;
+    }
+}
+.btne button:hover{
+    background-color: rgb(230, 230, 85);
+    color: rgb(194, 145, 23)
+}
+/* END-HOME */
+/* START CONTACT US */
+.contact-us{
+    margin: auto;
+    position: relative;
+}
+.breadcrumb pre{
+font-weight: 700;
+    
+}
+.breadcrumb {
+    padding-right:500px ;
+    
+  margin-right: 200px;      
+    }
+    span svg{
+        fill:rgb(149, 246, 246) !important;
+        stroke: rgb(145, 244, 244);
+        justify-content: center;
+        width: 1366px;
+        height: 420px;
+align-items: center;
+    }
+    .map-section__background-wrapper .text{
+        position: absolute;
+        left: 20px;
+    margin-top: 120px;  }

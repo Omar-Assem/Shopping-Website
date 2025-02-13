@@ -1,0 +1,57 @@
+.bolges .row li{
+    list-style: none;
+
+    
+}
+.bolges .row li a{
+    display: block;
+margin: 15px 0;
+padding: 12px 0 20px 0;
+text-align: left;
+font-size: small;
+
+
+}
+
+.bolges .row li a:hover::before{
+    content: ">>";
+    color: #696969;
+    padding-left: 20px;
+   opacity: 1;
+   
+   
+}
+.bolges .row li a:hover{
+    color: #696969;
+   
+}
+.bolges .card img{
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+   
+}
+.bolges .card2 .card-body {
+flex-wrap: wrap;
+height: auto;
+}
+
+.bolges .row .card2 a:hover{
+color: #696969;
+
+
+}
+.bolges .row .card2 a:hover::before{
+    content: "_______";
+    color: #696969;
+    transition: all 1s ease-in-out;
+
+}
+.column .img img{
+    width: 50px;
+    margin: 10px;
+    display: flex;
+}
+.column .img img .img-body{
+    
+}

@@ -1,0 +1,306 @@
+
+    /* Home */
+    .home{
+        background-image: url(/public/img/header_image_2.webp);
+        background-color: #fff;
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: cover;
+        height: 100vh;
+        font-family: sans-serif, ;
+        font-size: 20px;
+        animation: change 10s infinite ease-in-out ;
+    
+    }
+    @keyframes change {
+        0%{
+            background-image: url(/public/img/header_image_2.webp);
+        }
+        50%{
+            background-image: url(/public/img/Header_image_1_1.webp);
+        }
+        75%{
+            background-image: url(/public/img/header_image_2.webp);
+        }
+        100%{
+            background-image: url(/public/img/Header_image_1_1.webp);
+        }
+        50%{
+            background-image: url(/public/img/header_image_2.webp);
+        }
+        0%{
+            background-image: url(/public/img/Header_image_1_1.webp);
+        }
+    }
+    @media (max-width:767px){
+    .home{
+        background-position: center;
+        object-fit: cover;
+    }
+    }
+    
+    
+    
+    .home .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 200px;
+        padding-right: 170px;
+        
+    }
+    .home .text h2{
+        font-size: 2.5rem;
+        font-weight: 600;
+      
+    
+    }
+
+    .card{
+        object-fit: cover;
+        cursor: pointer;
+       position: relative;
+        
+    }
+    .card .card-continar {
+        position: relative;
+    
+    }
+    .luka, .luka2 {
+        width: 100%;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .luka2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    
+    .card:hover .luka2 {
+        opacity: 1;
+    }
+    
+    .card:hover .luka {
+        opacity: 0;
+    }
+    .cards .row .card .like span{
+        position: absolute;
+       font-size: smaller;
+        background: red;
+       width: 70px;
+       text-align: center;
+       color: #fff;
+    }
+    .cards .row .card .like .mora{
+        position: absolute;
+        font-size: smaller;
+         background: black;
+        width: 70px;
+        text-align: center;
+        color: #fff;
+        top:25px;
+        height: 20px;
+    }
+    .cards .row .overliye {
+        position: absolute;
+        top: 0;
+        right: 0;
+    text-align: center;
+       opacity: 0;
+    
+    
+    }
+    .cards .row .overliye span{
+        background: #000;
+        padding: 4px;
+        display: block;
+        margin: 2px;
+        transition: .5s;
+    }
+    .cards .row .overliye span:hover{
+        background-color: yellow;
+        color: orangered;
+    
+    } 
+    .card-body{
+        width: 100%;
+        height: auto;
+        padding: 12px;
+        margin: 0;
+    
+    }
+    .row{
+        width: 100%;
+    }
+    .card:hover{
+       background-color: black;
+       color: #fff;
+       outline: none;
+       border: 1px transparent none;
+       transition: all 1s;
+    .overliye{
+        opacity: 1;
+        transition: all .5s;
+    }
+    }
+    .card .like span{
+    
+        z-index: 1;
+    }
+    .card p{
+    
+        font-weight: 100;
+        font-size: small;
+        line-height: 2px;
+        gap: -1px;
+    }
+    .card  h3{
+      
+        font-weight: 800;
+        font-size:small;
+        flex-grow: 1;
+    }
+    .card h3 span{
+      text-decoration: line-through;
+      color: #696969;
+      padding: 0 10px;
+    }
+    /* end-of-cards */
+    .footer .img img{
+        width:100%; height: 50vh;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        scrollbar-width:none;
+    object-fit: cover;
+    box-sizing: border-box;
+    }
+    /* footer-img */
+    @media  (max-width:767px) {
+        .footer .img img{
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+           
+            object-fit: cover;
+        
+    }}
+    /* .commend {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 25PX 0;
+    
+    } */
+    .commend {
+    
+        width: 100%;
+    
+    
+        text-align: center;
+        padding: 20px;
+      
+        width: 100%;
+        overflow: hidden;
+        
+    
+    }
+    
+    
+     .commend p{
+        flex-wrap: wrap;
+        overflow-y: hidden;
+        font-size: 20px;
+    } 
+     .commend .know-commend h2{
+        font-size: 14px;
+        font-family: Avenir Next, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        color: #3c3c3c;
+        line-height: 1.5;
+        letter-spacing: .5px;
+    }
+    .commend  h6{
+        padding: 25px 0;
+        font-weight: 600;
+        font-size: 20px;
+        
+    } 
+    
+    
+    
+    
+    /* end-of-commend */
+    .bg-dark{
+        width: 100%;
+        height: 20vh;
+        background-color: #3c3c3c;
+      
+    
+    }
+    .bg-dark .img {
+     
+    text-align: center;
+    text-wrap: wrap;
+        display: flex;
+        justify-content: space-around;
+      align-items: center;
+      padding: 2rem 0 !important;
+        
+        
+    }
+    body {
+        overflow-x: hidden;
+        font-family: "Mora", sans-serif; /* تأكد من تحميل الخط */
+    }
+    
+    h2 {
+        font-family: "Moro", sans-serif; /* تأكد من توفر الخط */
+    }
+    
+    /* تصحيح الأنيميشن */
+    @keyframes change {
+        0%, 75% {
+            background-image: url(/public/img/header_image_2.webp);
+        }
+        50%, 100% {
+            background-image: url(/public/img/Header_image_1_1.webp);
+        }
+    }
+    
+    /* تصحيح .card:hover */
+    .card:hover {
+        background-color: black;
+        color: #fff;
+        outline: none;
+        border: none;
+        transition: all 1s;
+    }
+    
+    .card:hover .overliye {
+        opacity: 1;
+        transition: all 0.5s;
+    }
+    
+    /* تصحيح font-size */
+    .feedback-social .social a {
+        font-size: 16px; /* بدلاً من 300 */
+    }
+    
+    /* تحسين الـ background */
+    .home {
+        background-image: url(../img/header_image_2.webp);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    
+    /* تصحيح object-fit */
+    .footer .img img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+    
