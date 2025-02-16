@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import './Style/Footer.css'
+import { Dfooter, Dlinks } from './Dheader'
+import { Dicon } from './Dheader'
 const Footer = () => {
   return (
     <>
@@ -25,22 +27,16 @@ const Footer = () => {
              Perspiciatis, esse quibusdam!</p>
             </div>
              <div className="bottom-social">
+              {Dicon.map((e,i)=>{
+                return(
+                  <>
+                  <a className='mx-3' href="#" target="_blank"  rel="noopener" aria-describedby="a11y-new-window-message" key={i}>
+  <i className={e.url}></i>
+</a>
+                  </>
+                )
+              })}
             
-<a className='mx-3' href="#" target="_blank" title="copperclothingweb on Twitter" rel="noopener" aria-describedby="a11y-new-window-message">
-  <i className="fa-brands fa-twitter"></i>
-</a>
-
-<a className='mx-3' href="#" target="_blank" title="copperclothingweb on Facebook" rel="noopener" aria-describedby="a11y-new-window-message">
-  <i className="fab fa-facebook"></i>
-</a>
-
-<a className='mx-3' href="#" target="_blank" title="copperclothingweb on Pinterest" rel="noopener" aria-describedby="a11y-new-window-message">
-  <i className="fab fa-pinterest-p" ></i>
-</a>
-
-<a className='mx-3' href="#" target="_blank" title="copperclothingweb on Instagram" rel="noopener" aria-describedby="a11y-new-window-message">
-  <i className="fab fa-instagram"></i>
-</a>
              </div>
        
       </div>
@@ -52,30 +48,17 @@ const Footer = () => {
         <div className="links">
           <form>
             <ul>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/Catalog">Catalog</NavLink>
-              </li>
-              <li>
-                <NavLink to="/colliction">Collections</NavLink>
-              </li>
-              <li>
-                <NavLink to="/Bolges">Blogs</NavLink>
-              </li>
-              <li>
-                <NavLink to="/Contact-us">Contact Us</NavLink>
-              </li>
-              <li>
-                  <NavLink to="/SIgnin">Sign In</NavLink>
-              </li>
-              <li>
-                <NavLink to="/CREATE ACCOUNT">Create An Account</NavLink>
-              </li>
-              <li>
-                <NavLink to="/product">All Products</NavLink>
-              </li>
+              {Dfooter.map((e,i)=>(
+                <>
+                <li key={i}>
+ <NavLink to={`/${e.url}`}>{e.url}</NavLink>
+</li>
+                </>
+ 
+              ))
+          }
+          
+             
             </ul>
           </form>
         </div>
@@ -87,18 +70,17 @@ const Footer = () => {
       <div className="links">
         <form>
           <ul>
-            <li>
-              <NavLink to="/Faq">Faq</NavLink>
+            {Dlinks.map((e,i)=>{
+              return(
+                <>
+                  <li key={i}>
+              <NavLink to={`/${e.url}`}>{e.url}</NavLink>
             </li>
-            <li>
-              <NavLink to="/Wishlist">Wishlist</NavLink>
-            </li>
-            <li>
-              <NavLink to="#">Article</NavLink>
-            </li>
-            <li>
-              <NavLink to="search">Search</NavLink>
-            </li>
+                </>
+              )
+            })}
+          
+        
            
           </ul>
         </form>

@@ -24,14 +24,15 @@ return (
 <Routes>
       <Route path="/" element={<LayOut />}>
       <Route index element={<Home />} />
+      <Route path='/Home' element={<Home />} />
       <Route path="/Catalog" element={<Catalog />} />
       <Route path="/signIn" element={<Sign />} />
       <Route path="/logIn" element={<Login />} />
       <Route path="/Faq" element={<FAQ />} />
       <Route path="/Wishlist" element={<WishList />} />
       <Route path="/Cart" element={<Cart />} />
-      <Route path="/Contact-us" element={<Contact />} />
-      <Route path="/Blog" element={<Blog />} />
+      <Route path="/Contact us" element={<Contact />} />
+      <Route path="/Blogs" element={<Blog />} />
       <Route path="/Collection" element={<Collection />} />
        
        
