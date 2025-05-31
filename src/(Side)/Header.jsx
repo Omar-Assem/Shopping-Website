@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Style/Header.css";
 import { NavLink } from "react-router-dom";
-import { Dheader } from "./Dheader";
-import { Dicon } from "./Dheader";
+import { Dheader, Dicon } from "./Dheader";
+import "./Style/Header.css";
 
 const Header = () => {
   const messages = [
@@ -12,58 +11,42 @@ const Header = () => {
   ];
 
   const [index, setIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % messages.length); // يغير النص بعد الاختفاء
-        setVisible(false); // يرجع النص الجديد يظهر
-      }, 500); // تأخير النص الجديد بعد 500ms
-    }, 3000);
+      setIndex((prev) => (prev + 1) % messages.length);
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [messages.length]);
+
   return (
     <>
       <div className="offer">
         <AnimatePresence mode="wait">
-          {visible && (
-            <motion.p
-              key={index}
-              className="text-lg"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.5 }}
-            >
-              {messages[index]}
-            </motion.p>
-          )}
+          <motion.p
+            key={index} // هذا المفتاح يسبب إعادة تشغيل الانيميشن
+            className="text-lg"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+          >
+            {messages[index]}
+          </motion.p>
         </AnimatePresence>
       </div>
 
-      <div className="feedback-social">
-        <div className="col-lg-9">
-          <div className="call-me">
-            Order Online Call Us <a href="#">0123456789</a>
-          </div>
+      <div className="feedback-social container d-flex justify-content-between py-2">
+        <div className="call-me">
+          Order Online Call Us <a href="tel:0123456789">0123456789</a>
         </div>
-        <div className="col-lg-3">
-          <div className="social">
-            {Dicon.map((e,i)=>{
-              return(
-                <>
-                 <a href="#" target="_blank"  key={i}>
+        <div className="social">
+          {Dicon.map((e, i) => (
+            <a href="#" target="_blank" key={i} rel="noopener noreferrer" className="mx-2">
               <i className={e.url}></i>
             </a>
-                </>
-              )
-            })}
-           
-        
-          </div>
+          ))}
         </div>
       </div>
 
@@ -86,16 +69,18 @@ const Header = () => {
             </NavLink>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul className="navbar-nav ms-auto mb-3 mb-lg-0">
-                  {Dheader.map((e, i) => {
-                    return(<>
-                <li className="nav-item" >
-                    <NavLink className="nav-link" to={`/${e.url}`} key={i}>
+                {Dheader.map((e, i) => (
+                  <li className="nav-item" key={i}>
+                    <NavLink className="nav-link" to={`/${e.url}`}>
                       {e.url}
                     </NavLink>
+                  </li>
+                ))}
+                <li className="nav-item">
+                  <NavLink className="nav-link" to={"/Cart"}>
+                    <i className="fa-solid fa-cart-shopping">0</i>
+                  </NavLink>
                 </li>
-                    </>
-                    )
-                  })}
               </ul>
             </div>
           </div>

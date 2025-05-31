@@ -3,8 +3,8 @@ export const  Dheader=[
     {url : "Catalog"},
     {url : "Collection"},
     {url : "Blogs"},
-    {url : "Contact Us"},
-    {url : "Create Account"},
+    {url : "Contact-Us"},
+    {url : "Create-Account"},
     {url : "logIn"}
 ]
 export const Dfooter = [
@@ -12,8 +12,8 @@ export const Dfooter = [
     {url : "Catalog"},
     {url : "Collection"},
     {url : "Blogs"},
-    {url : "Contact Us"},
-    {url : "Create Account"},
+    {url : "Contact-Us"},
+    {url : "Create-Account"},
     {url : "logIn"},
     {url : "All Products"}
 

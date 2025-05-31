@@ -11,27 +11,32 @@ import Catalog from './Pages/Catalog/Catalog';
 import Sign from './(Auth)/Sign';
 import Login from './(Auth)/Login';
 import WishList from './(Order)/WishList';
-import Cart from './(Order)/Cart';
+
 import FAQ from './Pages/FAQ/FAQ';
 import Contact from './Pages/Contact-us/Contact';
 import Blog from './Pages/Blog/Blog';
 import Collection from './Pages/Colliction/Colliction';
+import Cart from './(Order)/Cart';
+
 
 function App() {
 
 return (
 <>
+
+
+
 <Routes>
       <Route path="/" element={<LayOut />}>
       <Route index element={<Home />} />
       <Route path='/Home' element={<Home />} />
       <Route path="/Catalog" element={<Catalog />} />
-      <Route path="/signIn" element={<Sign />} />
+      <Route path="/Create-Account" element={<Sign />} />
       <Route path="/logIn" element={<Login />} />
       <Route path="/Faq" element={<FAQ />} />
       <Route path="/Wishlist" element={<WishList />} />
       <Route path="/Cart" element={<Cart />} />
-      <Route path="/Contact us" element={<Contact />} />
+      <Route path="/Contact-Us" element={<Contact />} />
       <Route path="/Blogs" element={<Blog />} />
       <Route path="/Collection" element={<Collection />} />
        

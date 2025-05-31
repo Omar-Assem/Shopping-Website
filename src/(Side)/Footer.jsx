@@ -1,109 +1,93 @@
-import { NavLink } from 'react-router-dom'
-import './Style/Footer.css'
-import { Dfooter, Dlinks } from './Dheader'
-import { Dicon } from './Dheader'
+import { NavLink } from 'react-router-dom';
+import { Dfooter, Dlinks, Dicon } from './Dheader';
+
 const Footer = () => {
   return (
     <>
-<footer>
-  <div className="container">
-    <div className="row">
-      <div className="col-lg-4">
-        
-      </div>
-    </div>
-  </div>
-</footer>
-<div className="bottom">
-  <div className="container">
-    <div className="row">
-      <div className="col-lg-4">
-        <div className="img-logo">
-          <img src="/public/img/Logo.png" alt=""/>
-        </div>
-        <div className="text">
-          <p>Lorem ipsum dolor sit amet consectetu
-            r adipisicing elit.
-             Perspiciatis, esse quibusdam!</p>
+      <footer className="bg-light pt-5">
+        <div className="container">
+          <div className="row gy-4">
+
+            {/* Logo + Description + Social */}
+            <div className="col-12 col-md-6 col-lg-4">
+              <div className="mb-3">
+                <img src="/img/Logo.png" alt="Logo" className="img-fluid w-50" />
+              </div>
+              <p className="text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis, esse quibusdam!
+              </p>
+              <div className="d-flex gap-3 mt-3">
+                {Dicon.map((e, i) => (
+                  <a
+                    key={i}
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    aria-describedby="a11y-new-window-message"
+                    className="text-dark fs-5"
+                  >
+                    <i className={e.url}></i>
+                  </a>
+                ))}
+              </div>
             </div>
-             <div className="bottom-social">
-              {Dicon.map((e,i)=>{
-                return(
-                  <>
-                  <a className='mx-3' href="#" target="_blank"  rel="noopener" aria-describedby="a11y-new-window-message" key={i}>
-  <i className={e.url}></i>
-</a>
-                  </>
-                )
-              })}
-            
-             </div>
-       
-      </div>
-      <div className="col-lg-2">
-        <div className="key-word">
 
-          <h2>Categories</h2>
-        </div>
-        <div className="links">
-          <form>
-            <ul>
-              {Dfooter.map((e,i)=>(
-                <>
-                <li key={i}>
- <NavLink to={`/${e.url}`}>{e.url}</NavLink>
-</li>
-                </>
- 
-              ))
-          }
-          
-             
-            </ul>
-          </form>
-        </div>
-        
-      </div>
-      <div className="col-lg-2">
-       <h2>Quick links
-      </h2>
-      <div className="links">
-        <form>
-          <ul>
-            {Dlinks.map((e,i)=>{
-              return(
-                <>
+            {/* Categories */}
+            <div className="col-6 col-md-3 col-lg-2">
+              <h5>Categories</h5>
+              <ul className="list-unstyled">
+                {Dfooter.map((e, i) => (
                   <li key={i}>
-              <NavLink to={`/${e.url}`}>{e.url}</NavLink>
-            </li>
-                </>
-              )
-            })}
-          
-        
-           
-          </ul>
-        </form>
-      </div>
-        
-      </div>
-      <div className="col-lg-4">
-       <h2>Newsletter Signup</h2> 
-       <p>You may unsubscribe at any moment. 
-        For that purpose,
-         please find our contact info in the legal notice</p>
-         <div className="btne">
-           <input type="email" placeholder="Your email address"/>
-          <button type="button" className="btn ">Subscribe</button>
-         </div>
-        
-      </div>
-     
-    </div>
-  </div>
-</div>
-    </>
-  )
-}
+                    <NavLink to={`/${e.url}`} className="text-muted text-decoration-none d-block py-1">
+                      {e.url}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-export default Footer
+            {/* Quick Links */}
+            <div className="col-6 col-md-3 col-lg-2">
+              <h5>Quick Links</h5>
+              <ul className="list-unstyled">
+                {Dlinks.map((e, i) => (
+                  <li key={i}>
+                    <NavLink to={`/${e.url}`} className="text-muted text-decoration-none d-block py-1">
+                      {e.url}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Newsletter */}
+            <div className="col-12 col-md-12 col-lg-4">
+              <h5>Newsletter Signup</h5>
+              <p className="text-muted">
+                You may unsubscribe at any moment.
+                For that purpose, please find our contact info in the legal notice.
+              </p>
+              <form className="d-flex flex-column flex-sm-row gap-2">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  className="form-control"
+                />
+                <button type="button" className="btn btn-dark">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <div className="text-center py-3 border-top mt-4 text-muted small">
+          &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+        </div>
+      </footer>
+    </>
+  );
+};
+
+export default Footer;

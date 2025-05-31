@@ -7,29 +7,29 @@ import Rate from "./Rate";
 const HomeSection = () => {
   return (
     <>
-    <section className="home">
-      <div className="container">
-        <div className="text">
-          <h1>Brand New Spring Summer</h1>
-          <h2>
-            <Typewriter 
-              words={["FEATURES", "COLLECTIONS", "NEW ARRIVALS"]} 
-              loop={true} 
-              cursor 
-              cursorStyle="|" 
-              typeSpeed={100} 
-              deleteSpeed={50} 
-              delaySpeed={1000}
-            />
-          </h2>
-          <p>The best dark spot correctors for every budget</p>
+      <section className="home">
+        <div className="container">
+          <div className="text">
+            <h1>Brand New Spring Summer</h1>
+            <h2>
+              <Typewriter
+                words={["FEATURES", "COLLECTIONS", "NEW ARRIVALS"]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={100}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </h2>
+            <p>The best dark spot correctors for every budget</p>
+          </div>
         </div>
-      </div>
-    </section>
-    <Landing/>
-    <Products/>
-    <LBg/>
-    <Rate/>
+      </section>
+      <Landing />
+      <Products />
+      <LBg />
+      <Rate />
     </>
   );
 };

@@ -19,7 +19,7 @@ const Products = () => {
         {Dproducts.map((e, i) => {
           return (
             <>
-              <div className="col-lg-2 col-md-6 col-sm-12">
+              <div className="col-lg-2 col-md-6 col-sm-12 my-2">
                 <div className="card" key={i}>
                   <div className="like">
                     <span>{e.offer ? e.offer : ''}</span>

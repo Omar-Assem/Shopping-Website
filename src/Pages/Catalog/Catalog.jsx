@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const Catalog = () => {
   return (
@@ -12,7 +13,11 @@ const Catalog = () => {
                Page not found!
            </h1>
            
-           <p className='text-center'>PLEASE GO BACK TO  <a href="project.html">HOMEPAGE</a></p>
+           <p className='text-center'>PLEASE GO BACK TO   <span>
+           <Link to={"/"}>HOMEPAGE</Link>
+
+           </span> </p>
+         
         </div>
      </div>
  </section>

@@ -13,7 +13,7 @@ const Contact = () => {
             <input className="email" type="email" placeholder="Email" />
             <input className="email" placeholder="Phone Number" type="tel" />
             <input className="email" type="description" placeholder="Massege" />
-            <button type="button">send</button>
+            <button type="button" >send</button>
           </div>
         </div>
       </div>
